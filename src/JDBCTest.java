@@ -8,9 +8,13 @@ public class JDBCTest {
         Statement myStmt = null;
         ResultSet myRs = null;
 
+        String user = "student";
+        String password = "student";
+        String url = "jdbc:mysql://localhost:3306/demo";
+
         try {
             // 1. Get a connection to database
-            myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "student" , "student");
+            myConn = DriverManager.getConnection(url, user, password);
 
             System.out.println("Database connection successful!\n");
 
